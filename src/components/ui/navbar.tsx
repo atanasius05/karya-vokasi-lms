@@ -1,6 +1,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { AppButton } from "@/components/ui/button"
 import "@/index.css";
 
@@ -16,6 +16,7 @@ function classNames(...classes: (string | false | null | undefined)[]): string {
 
 export default function Navbar() {
   const location = useLocation()
+  const navigate = useNavigate();
 
   return (
     <Disclosure as="nav" className="fixed top-0 left-0 w-full bg-white z-1000 flex justify-center">
@@ -67,6 +68,7 @@ export default function Navbar() {
               <div className="hidden min-[769px]:flex items-center space-x-3">
                 <div className='mr-[24px]'>
                   <AppButton
+                    onClick={() => navigate("/register")}
                     label="Daftar"
                     color="success"
                     sx={{
@@ -79,6 +81,7 @@ export default function Navbar() {
                   />
                 </div>
                 <AppButton
+                  onClick={() => navigate("/login")}
                   label="Login"
                   variant="outlined"
                   sx={{
@@ -143,13 +146,15 @@ export default function Navbar() {
               {/* Bottom Buttons */}
               <div className="flex flex-col space-y-2 mb-[50px]">
                 <a
+                  onClick={() => navigate("/register")}
                   href="#"
                   className="w-full px-5 py-2 text-center rounded-lg bg-[#4BD270] text-white font-semibold hover:bg-[#3ac464] transition"
                 >
                   Daftar
                 </a>
                 <a
-                  href="#"
+                  onClick={() => navigate("/login")}
+
                   className="w-full px-5 py-2 text-center rounded-lg border-2 border-[#4BD270] text-[#4BD270] font-semibold hover:bg-[#4BD270]/10 transition"
                 >
                   Login
