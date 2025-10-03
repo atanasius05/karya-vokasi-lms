@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import AuthSection from "@/components/ui/section/authSection"
 import { EnvelopeIcon, LockClosedIcon, EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 
 export default function LoginPage() {
     const [showPassword, setShowPassword] = useState(false);
-
+    const navigate = useNavigate();
     return (
         <AuthSection images={["/src/assets/images/img-beranda.png", "/src/assets/images/carousel-section/masuk-akun.svg",]}>
             <div className="w-full flex items-center justify-center px-4">
@@ -77,7 +78,7 @@ export default function LoginPage() {
                         {/* Button */}
                         <button
                             type="submit"
-                            className="w-full max-w-lg h-[55px] bg-[#61EA86] text-white py-2 rounded-lg hover:bg-green-500 transition"
+                            className="w-full max-w-lg h-[55px] bg-[#61EA86] text-white py-2 rounded-lg hover:bg-green-500 transition cursor-pointer"
                         >
                             Login
                         </button>
@@ -92,7 +93,7 @@ export default function LoginPage() {
 
                     {/* Sign Up */}
                     <p className="text-center text-sm mt-6 w-full max-w-lg">
-                        <a href="#" className="text-green-500 font-medium">
+                        <a className="text-green-500 font-medium cursor-pointer" onClick={() => navigate("/register")}>
                             Sign Up
                         </a>
                     </p>

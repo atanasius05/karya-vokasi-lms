@@ -10,8 +10,11 @@ import ContactPage from "@/pages/kontak/page";
 import CatalogPage from "@/pages/katalog/page";
 import LoginPage from "@/pages/auth/login-page";
 import RegistPage from "./pages/auth/regist/regist-page";
-import RegistPengajarPage from "./pages/auth/regist/pengajar-page";
-import RegistPelajarPage from "./pages/auth/regist/pelajar-page";
+import RegistPengajarPage from "./pages/auth/regist/pengajar/pengajar-page";
+import RegistPelajarPage from "./pages/auth/regist/pelajar/pelajar-page";
+import RegistPaketPelajarPage from "./pages/auth/regist/pelajar/paket";
+import RegistMapelPelajarPage from "./pages/auth/regist/pelajar/mata-pelajaran";
+import PaymentPage from "./pages/auth/regist/metode-pembayaran-page";
 
 const route = (path: string, { ...props }: RouteObject) => ({ path, ...props });
 
@@ -56,6 +59,18 @@ const routes: RouteObject[] = [
       {
         path: "/register/pelajar",
         element: <RegistPelajarPage />,
+      },
+      {
+        path: "/register/pelajar/paket",
+        element: <RegistPaketPelajarPage />,
+      },
+      {
+        path: "/paket/:id",
+        element: <RegistMapelPelajarPage />,
+      },
+      {
+        path: "/pembayaran",
+        element: <PaymentPage />,
       },
     ],
   }),

@@ -1,6 +1,7 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import AuthSection from "@/components/ui/section/authSection";
 
+
 export default function RegistPage() {
     const navigate = useNavigate();
 

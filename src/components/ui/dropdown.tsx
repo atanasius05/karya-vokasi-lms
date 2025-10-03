@@ -56,7 +56,7 @@ export default function Dropdown({
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-lg bg-white ring-1 ring-black/5 focus:outline-none z-10">
+            <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-lg bg-white text-[13px] ring-1 ring-black/5 focus:outline-none z-10">
               {options.map((option) => (
                 <Listbox.Option
                   key={option.value}

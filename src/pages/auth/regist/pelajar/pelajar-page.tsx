@@ -14,7 +14,9 @@ export default function RegistPelajarPage() {
                     <h1 className="text-[36px] font-medium text-center mb-2">
                         Form Pelajar
                     </h1>
-                    <FormDataDiri />
+                    <FormDataDiri 
+                    fieldRequired={{ pendidikan: false }}
+                    redirectTo="paket" />
                     
                 </div>
             </div>
