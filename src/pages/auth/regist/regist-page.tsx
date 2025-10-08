@@ -3,6 +3,8 @@ import AuthSection from "@/components/ui/section/authSection";
 import wongsoLogo from "@/assets/images/img-wongso.png";
 import img1 from "@/assets/images/img-login.png";
 import img2 from "@/assets/images/img-beranda.png";
+import pelajar from "@/assets/images/pelajar.png"
+import pengajar from "@/assets/images/pengajar.png"
 
 export default function RegistPage() {
     const navigate = useNavigate();
@@ -28,7 +30,7 @@ export default function RegistPage() {
                             {/* Left Section - Illustration */}
                             <div className="w-1/3 flex justify-center items-center p-6 border-r border-gray-200">
                                 <img
-                                    src={img2}
+                                    src={pengajar}
                                     alt="Teacher Illustration"
                                     className="w-32 h-32 object-contain"
                                 />
@@ -51,7 +53,7 @@ export default function RegistPage() {
                             {/* Left Section - Illustration */}
                             <div className="w-1/3 flex justify-center items-center p-6 border-r border-gray-200">
                                 <img
-                                    src="src/assets/images/pelajar.png"
+                                    src={pelajar}
                                     alt="Student Illustration"
                                     className="w-32 h-32 object-contain"
                                 />
