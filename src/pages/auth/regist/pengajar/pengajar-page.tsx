@@ -2,9 +2,12 @@ import AuthSection from "@/components/ui/section/authSection";
 import FormDataDiri from "@/components/ui/form/formDataDiri";
 import wongsoLogo from "@/assets/images/img-wongso.png";
 
+import img1 from "@/assets/images/pengajar.png"
+import img2 from "@/assets/images/carousel-section/daftar-pengajar.svg"
+
 export default function RegistPengajarPage() {
     return (
-        <AuthSection images={["/src/assets/images/pengajar.png", "/src/assets/images/carousel-section/daftar-pengajar.svg",]}>
+        <AuthSection images={[img1, img2]}>
             <div className="w-full flex items-center justify-center px-8 mb-15">
                 <div className="w-full max-w-xl">
                     <div className="flex justify-center mb-0">

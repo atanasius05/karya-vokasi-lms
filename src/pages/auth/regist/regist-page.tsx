@@ -12,7 +12,7 @@ export default function RegistPage() {
             <div className="w-full flex items-center justify-center px-8">
                 <div className="w-full max-w-xl">
                     <div className="flex justify-center mb-2">
-                        <img src="src/assets/images/img-wongso.png" alt="Wongso Logo" className="h-15 lg:h-20" />
+                        <img src={img1} alt="Wongso Logo" className="h-15 lg:h-20" />
                     </div>
 
                     <h1 className="text-[40px] font-medium text-center -mb-4">
@@ -28,7 +28,7 @@ export default function RegistPage() {
                             {/* Left Section - Illustration */}
                             <div className="w-1/3 flex justify-center items-center p-6 border-r border-gray-200">
                                 <img
-                                    src="src/assets/images/pengajar.png"
+                                    src={img2}
                                     alt="Teacher Illustration"
                                     className="w-32 h-32 object-contain"
                                 />
