@@ -1,6 +1,6 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import AuthSection from "@/components/ui/section/authSection";
-
+import wongsoLogo from "@/assets/images/img-wongso.png";
 import img1 from "@/assets/images/img-login.png";
 import img2 from "@/assets/images/img-beranda.png";
 
@@ -12,7 +12,7 @@ export default function RegistPage() {
             <div className="w-full flex items-center justify-center px-8">
                 <div className="w-full max-w-xl">
                     <div className="flex justify-center mb-2">
-                        <img src={img1} alt="Wongso Logo" className="h-15 lg:h-20" />
+                        <img src={wongsoLogo} alt="Wongso Logo" className="h-15 lg:h-20" />
                     </div>
 
                     <h1 className="text-[40px] font-medium text-center -mb-4">
