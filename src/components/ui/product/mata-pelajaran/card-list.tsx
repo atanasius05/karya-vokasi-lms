@@ -1,12 +1,12 @@
 // card-list.tsx
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { ClipboardDocumentCheckIcon } from "@heroicons/react/24/solid";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { dummyProducts } from "@/utils/data/paket"; // ambil data dummy paket
 
 export default function CardList() {
   const { id } = useParams();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const product = dummyProducts.find((p) => p.id === Number(id));
 
   if (!product) {

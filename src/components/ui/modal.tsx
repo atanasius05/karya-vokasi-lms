@@ -12,7 +12,7 @@ interface ModalProps {
 
 const Modal: React.FC<ModalProps> = ({
   isOpen,
-  title = "Are you sure?",
+  // title = "Are you sure?",
   description = "Are you sure you want to delete this product?",
   confirmText = "Yes, I'm sure",
   cancelText = "No, cancel",

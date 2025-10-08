@@ -1,5 +1,3 @@
-import React from "react";
-
 const brands = [
   { name: "Netflix", logo: "src/assets/images/brand-icon/netflix.svg" },
   { name: "YouTube", logo: "src/assets/images/brand-icon/youtube.svg" },
