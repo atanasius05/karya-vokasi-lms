@@ -3,6 +3,10 @@ import { useNavigate } from "react-router-dom";
 import AuthSection from "@/components/ui/section/authSection";
 import { EnvelopeIcon, LockClosedIcon, EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 
+import img from "@/assets/images/img-beranda.png"
+import img2 from "@/assets/images/carousel-section/masuk-akun.svg";
+import wongso from "@/assets/images/img-wongso-2.png"
+
 export default function LoginPage() {
     const [showPassword, setShowPassword] = useState(false);
     const [email, setEmail] = useState("");
@@ -22,11 +26,11 @@ export default function LoginPage() {
     };
 
     return (
-        <AuthSection images={["/src/assets/images/img-beranda.png", "/src/assets/images/carousel-section/masuk-akun.svg"]}>
+        <AuthSection images={[img, img2]}>
             <div className="w-full flex items-center justify-center px-4">
                 <div className="w-full max-w-xl">
                     <div className="flex justify-left mb-2">
-                        <img src="src/assets/images/img-wongso-2.png" alt="Wongso Logo" className="h-10" />
+                        <img src={wongso} alt="Wongso Logo" className="h-10" />
                     </div>
 
                     <h1 className="text-[36px] md:text-[48px] font-reguler text-left -mb-2">Selamat Datang</h1>

@@ -12,6 +12,9 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AppButton } from "@/components/ui/button";
 import "@/index.css";
 
+import wongso from "@/assets/images/wongso.png"
+import pelajar from "@/assets/images/pelajar.png"
+
 const navigation = [
   { name: "BERANDA", href: "/" },
   { name: "TENTANG KAMI", href: "/tentang-kami" },
@@ -80,7 +83,7 @@ export default function Navbar() {
                 <Link to="/">
                   <img
                     alt="Karya Vokasi LMS"
-                    src="/wongso.png"
+                    src={wongso}
                     className="h-8 w-auto object-contain"
                   />
                 </Link>
@@ -123,7 +126,7 @@ export default function Navbar() {
                       className="p-0 border-0 bg-transparent"
                     >
                       <img
-                        src="/src/assets/images/pelajar.png"
+                        src={pelajar}
                         alt="User avatar"
                         className="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 cursor-pointer"
                       />
@@ -146,7 +149,7 @@ export default function Navbar() {
                             </p>
                           </div>
                           <img
-                            src="/src/assets/images/pelajar.png"
+                            src={pelajar}
                             alt="user avatar"
                             className="w-10 h-10 rounded-full"
                           />

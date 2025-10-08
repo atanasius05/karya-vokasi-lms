@@ -1,5 +1,9 @@
 import React from "react";
 
+import tim1 from "@/assets/images/tim/pak-harry-lesto-hadi.png"
+import tim2 from "@/assets/images/tim/pak-kristiyanto-widiyawan.png"
+import tim3 from "@/assets/images/tim/bu-elly-suprihatin.png"
+
 type TeamCardProps = {
   image: string;
   name: string;
@@ -27,17 +31,17 @@ const TeamCard: React.FC<TeamCardProps> = ({ image, name, role }) => {
 const TeamSection: React.FC = () => {
   const team = [
     {
-      image: "src/assets/images/tim/pak-harry-lesto-hadi.png",
+      image: tim1,
       name: "Harry Lesto Hadi",
       role: "Direktur Utama",
     },
     {
-      image: "src/assets/images/tim/pak-kristiyanto-widiyawan.png",
+      image: tim2,
       name: "Kristiyanto Widiyawan",
       role: "Direktur Pemasaran & Kerjasama",
     },
     {
-      image: "src/assets/images/tim/bu-elly-suprihatin.png",
+      image: tim3,
       name: "Elly Suprihatin",
       role: "Direktur FAT & Pengadaan",
     },

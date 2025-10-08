@@ -5,6 +5,17 @@ import { ChevronDownIcon, CheckCircleIcon } from "@heroicons/react/24/solid";
 import AuthSection from "@/components/ui/section/authSection";
 import wongsoLogo from "@/assets/images/img-wongso.png";
 
+import bca from "@/assets/images/vendor/bca.svg";
+import bri from "@/assets/images/vendor/bri.svg";
+import mandiri from "@/assets/images/vendor/mandiri.svg";
+import ovo from "@/assets/images/vendor/ovo.svg";
+import gopay from "@/assets/images/vendor/gopay.svg";
+import visa from "@/assets/images/vendor/visa.svg";
+import masterCard from "@/assets/images/vendor/master-card.svg";
+
+import img from "@/assets/images/pelajar.png";
+import img2 from "@/assets/images/carousel-section/daftar-pelajar.svg";
+
 export default function MetodePembayaranPage() {
     const location = useLocation();
     const navigate = useNavigate();
@@ -19,7 +30,7 @@ export default function MetodePembayaranPage() {
 
     if (!product) {
         return (
-            <AuthSection images={["/src/assets/images/pelajar.png"]}>
+            <AuthSection images={[img]}>
                 <div className="flex flex-col items-center justify-center h-full py-12">
                     <p className="text-gray-600 text-center text-lg">
                         Tidak ada paket yang dipilih.
@@ -43,13 +54,13 @@ export default function MetodePembayaranPage() {
     };
 
     const vendorLogos: Record<string, string> = {
-        "Bank BCA": "/src/assets/images/vendor/bca.svg",
-        "Bank BRI": "/src/assets/images/vendor/bri.svg",
-        "Bank Mandiri": "/src/assets/images/vendor/mandiri.svg",
-        OVO: "/src/assets/images/vendor/ovo.svg",
-        GoPay: "/src/assets/images/vendor/gopay.svg",
-        Visa: "/src/assets/images/vendor/visa.svg",
-        MasterCard: "/src/assets/images/vendor/master-card.svg",
+        "Bank BCA": bca,
+        "Bank BRI": bri,
+        "Bank Mandiri": mandiri,
+        OVO: ovo,
+        GoPay: gopay,
+        Visa: visa,
+        MasterCard: masterCard,
     };
 
     const handleConfirm = () => {
@@ -66,8 +77,8 @@ export default function MetodePembayaranPage() {
     return (
         <AuthSection
             images={[
-                "/src/assets/images/pelajar.png",
-                "/src/assets/images/carousel-section/daftar-pelajar.svg",
+                img,
+                img2,
             ]}
         >
             <div className="w-full flex items-center justify-center px-8 mb-12">
@@ -113,9 +124,8 @@ export default function MetodePembayaranPage() {
                                 >
                                     <span>{item.label}</span>
                                     <ChevronDownIcon
-                                        className={`w-6 h-6 transition-transform duration-300 ${
-                                            openAccordion === item.key ? "rotate-180" : ""
-                                        }`}
+                                        className={`w-6 h-6 transition-transform duration-300 ${openAccordion === item.key ? "rotate-180" : ""
+                                            }`}
                                     />
                                 </button>
 
@@ -136,11 +146,10 @@ export default function MetodePembayaranPage() {
                                                         <button
                                                             key={v}
                                                             onClick={() => setSelectedVendor(v)}
-                                                            className={`w-full py-4 px-5 rounded-xl text-base font-medium shadow flex items-center gap-3 justify-between ${
-                                                                selectedVendor === v
+                                                            className={`w-full py-4 px-5 rounded-xl text-base font-medium shadow flex items-center gap-3 justify-between ${selectedVendor === v
                                                                     ? "bg-green-100 dark:bg-green-600 border-2 border-green-500"
                                                                     : "bg-white dark:bg-gray-600 hover:bg-gray-100 dark:hover:bg-gray-500"
-                                                            }`}
+                                                                }`}
                                                         >
                                                             <div className="flex items-center gap-3">
                                                                 <img
@@ -169,11 +178,10 @@ export default function MetodePembayaranPage() {
                         <button
                             disabled={!selectedVendor}
                             onClick={handleConfirm}
-                            className={`px-8 py-4 w-full rounded-xl text-lg font-semibold transition ${
-                                selectedVendor
+                            className={`px-8 py-4 w-full rounded-xl text-lg font-semibold transition ${selectedVendor
                                     ? "bg-green-500 hover:bg-green-600 text-white"
                                     : "bg-gray-300 text-gray-500 cursor-not-allowed"
-                            }`}
+                                }`}
                         >
                             Lanjut
                         </button>

@@ -9,27 +9,50 @@ import { HeroSectionCentered } from "@/components/ui/section/heroSectionCentered
 import Footer from "@/components/ui/footer"
 import CtaSection from "@/components/ui/section/ctasection";
 
+
+import wongsoLogo from "@/assets/images/img-wongso.png"
+import mengenal from "@/assets/images/Mengenal.svg"
+import imgBeranda from "@/assets/images/img-beranda.png"
+import imgBeranda2 from "@/assets/images/img-beranda-2.png"
+import iconPelajar from "@/assets/images/fun-fact-icon/pelajar.png"
+import iconPengajar from "@/assets/images/fun-fact-icon/pengajar.png"
+import iconKelas from "@/assets/images/fun-fact-icon/kelas.png"
+import iconSukses from "@/assets/images/fun-fact-icon/sukses.png"
+import teacherCard1 from "@/assets/images/icons-1.png"
+import teacherCard2 from "@/assets/images/icons-2.png"
+import teacherCard3 from "@/assets/images/icons-3.png"
+import teacherCard4 from "@/assets/images/icons-4.png"
+import benefit1 from "@/assets/images/benefit-icon/clock-icon.svg"
+import benefit2 from "@/assets/images/benefit-icon/money-icon.svg"
+import benefit3 from "@/assets/images/benefit-icon/handshake-icon.svg"
+import benefit4 from "@/assets/images/benefit-icon/speaker-icon.svg"
+import benefit5 from "@/assets/images/benefit-icon/bag-icon.svg"
+import benefit6 from "@/assets/images/benefit-icon/note-icon.svg"
+import benefit7 from "@/assets/images/benefit-icon/megaphone-icon.svg"
+import benefit8 from "@/assets/images/benefit-icon/camera-icon.svg"
+
+
 export default function Home() {
 
     const statsData = [
-        { icon: "src/assets/images/fun-fact-icon/pelajar.png", value: "10rb+", label: "Pelajar Seluruh Dunia" },
-        { icon: "src/assets/images/fun-fact-icon/pengajar.png", value: "2rb+", label: "Pengajar Profesional" },
-        { icon: "src/assets/images/fun-fact-icon/kelas.png", value: "26rb++", label: "Kelas Kursus Terdaftar" },
-        { icon: "src/assets/images/fun-fact-icon/sukses.png", value: "99.9%", label: "Tingkat Keberhasilan" },
+        { icon: iconPelajar, value: "10rb+", label: "Pelajar Seluruh Dunia" },
+        { icon: iconPengajar, value: "2rb+", label: "Pengajar Profesional" },
+        { icon: iconKelas, value: "26rb++", label: "Kelas Kursus Terdaftar" },
+        { icon: iconSukses, value: "99.9%", label: "Tingkat Keberhasilan" },
     ];
 
     return (
         <div>
             <div>
                 <HeroSection
-                    title="src/assets/images/img-wongso.png"
+                    title={wongsoLogo}
                     subtitle="Karya Vokasi LMS"
                     description={`Bersama kita tumbuh menginspirasi perubahan "Inovasi dan Kolaborasi" menuju pembangunan keberlanjutan.`}
                     highlightColor="text-green-400"
-                    imageSrc="src/assets/images/img-beranda.png"
+                    imageSrc={imgBeranda}
                     imageAlt="Ilustrasi LMS"
-                    showTopRightCircle= {false}
-                    showBottomLeftCircle = {false}
+                    showTopRightCircle={false}
+                    showBottomLeftCircle={false}
                 />
 
             </div>
@@ -41,17 +64,17 @@ export default function Home() {
 
             <div className="-mt-[100px]">
                 <HeroSection
-                    title="src/assets/images/Mengenal.svg"
+                    title={mengenal}
                     subtitle="Karya Rumah Vokasi"
                     description={`KARYA RUMAH VOKASI - DigiVokasi maka terciptalah solusi inovatif dan menciptakan nilai-nilai yang menembus batas serta memberikan manfaat bagi semua pihak `}
                     highlightColor="text-green-400"
-                    imageSrc="src/assets/images/img-beranda-2.png"
+                    imageSrc={imgBeranda2}
                     imageAlt="Ilustrasi LMS"
                     backgroundColor="#BAE4C5"
                     showButton
                     reverse
-                    showTopRightCircle= {false}
-                    showBottomLeftCircle = {false}
+                    showTopRightCircle={false}
+                    showBottomLeftCircle={false}
 
                 />
             </div>
@@ -121,25 +144,25 @@ export default function Home() {
                 backgroundColor="#BAE4C5"
             >
                 <TeacherCard
-                    imageSrc="src/assets/images/icons-1.png"
+                    imageSrc={teacherCard1}
                     alt="Step 1"
                     title="1. Daftar untuk Menjadi Pengajar"
                     description="Mengisi formulir pendaftaran sebagai tim pengajar."
                 />
                 <TeacherCard
-                    imageSrc="src/assets/images/icons-2.png"
+                    imageSrc={teacherCard2}
                     alt="Step 2"
                     title="2. Buat Kelas Kursusmu"
                     description="Setelah mendaftar, pengajar dapat membuat kelas kursus."
                 />
                 <TeacherCard
-                    imageSrc="src/assets/images/icons-3.png"
+                    imageSrc={teacherCard3}
                     alt="Step 3"
                     title="3. Menjual Kelas Kursus"
                     description="Pengajar dapat menjual kelas kursus yang sudah dibuat."
                 />
                 <TeacherCard
-                    imageSrc="src/assets/images/icons-4.png"
+                    imageSrc={teacherCard4}
                     alt="Step 4"
                     title="4. Penilaian dan Pengajaran"
                     description="Memberikan feedback & evaluasi terhadap pelajar."
@@ -157,49 +180,49 @@ export default function Home() {
                     xl:grid-cols-4 lg:gap-8 lg:justify-center mx-[50px]
                     ">
                     <BenefitCard
-                        iconSrc="src/assets/images/benefit-icon/clock-icon.svg"
+                        iconSrc={benefit1}
                         title="Waktu Fleksibel"
                         description="Atur jadwal sesuai kesibukanmu"
                         backgroundColor="#CDCBFF"
                     />
                     <BenefitCard
-                        iconSrc="src/assets/images/benefit-icon/money-icon.svg"
+                        iconSrc={benefit2}
                         title="Penghasilan Tambahan"
                         description="Dapat income dari mengajar"
                         backgroundColor="#BAE4C5"
                     />
                     <BenefitCard
-                        iconSrc="src/assets/images/benefit-icon/handshake-icon.svg"
+                        iconSrc={benefit3}
                         title="Bangun Relasi"
                         description="Terhubung dengan komunitas pelajar"
                         backgroundColor="#FFD2C8"
                     />
                     <BenefitCard
-                        iconSrc="src/assets/images/benefit-icon/speaker-icon.svg"
+                        iconSrc={benefit4}
                         title="Skill Komunikasi"
                         description="Asah kemampuan public speaking"
                         backgroundColor="#F7C7C7"
                     />
                     <BenefitCard
-                        iconSrc="src/assets/images/benefit-icon/bag-icon.svg"
+                        iconSrc={benefit5}
                         title="Bekal Karier"
                         description="Bangun reputasi sebagai profesional"
                         backgroundColor="#FFDEBC"
                     />
                     <BenefitCard
-                        iconSrc="src/assets/images/benefit-icon/note-icon.svg"
+                        iconSrc={benefit6}
                         title="Pengalaman Nyata"
                         description="Tingkatkan jam terbang mengajar"
                         backgroundColor="#E6CAC0"
                     />
                     <BenefitCard
-                        iconSrc="src/assets/images/benefit-icon/megaphone-icon.svg"
+                        iconSrc={benefit7}
                         title="Peluang Kerja"
                         description="Berpeluang langsung mendapatkan pekerjaan"
                         backgroundColor="#DCC4FC"
                     />
                     <BenefitCard
-                        iconSrc="src/assets/images/benefit-icon/camera-icon.svg"
+                        iconSrc={benefit8}
                         title="Portofolio Keren"
                         description="Tambah nilai di CV & LinkedIn"
                         backgroundColor="#D2D2D2"

@@ -4,6 +4,10 @@ import { ClipboardDocumentCheckIcon } from "@heroicons/react/24/solid";
 import { useParams } from "react-router-dom";
 import { dummyProducts } from "@/utils/data/paket"; // ambil data dummy paket
 
+import userIcon from "@/assets/images/user-icon.svg"; 
+import mapelIcon from "@/assets/images/mata-pelajaran.svg"; 
+import topikIcon from "@/assets/images/topik.svg"; 
+
 export default function CardList() {
   const { id } = useParams();
   // const navigate = useNavigate();
@@ -25,12 +29,12 @@ export default function CardList() {
       <div className="flex flex-col max-w-[1200px] md:flex-row items-start md:items-center justify-between mb-3 mx-auto">
         <div className="flex justify-between mx-auto w-full">
           <h1 className="flex items-start text-[18px] font-medium text-[#8F8F8F]">
-            <img src="/src/assets/images/user-icon.svg" alt="" className="mr-3 h-7" />
+            <img src={userIcon} alt="" className="mr-3 h-7" />
             {product.author}
           </h1>
           <h1 className="flex items-end text-[18px] font-medium text-[#8F8F8F]">
             {product.subjects.length} Mata Pelajaran
-            <img src="/src/assets/images/mata-pelajaran.svg" alt="" className="ml-3 h-5 mb-[3px]" />
+            <img src={mapelIcon} alt="" className="ml-3 h-5 mb-[3px]" />
           </h1>
         </div>
       </div>
@@ -62,7 +66,7 @@ export default function CardList() {
                     {mapel.tag}
                   </span>
                   <span className="flex text-sm text-gray-700 dark:text-gray-400 ">
-                    <img src="/src/assets/images/topik.svg" alt="topik" className="mr-2" /> {mapel.topics} Topik
+                    <img src={topikIcon} alt="topik" className="mr-2" /> {mapel.topics} Topik
                   </span>
                 </div>
 

@@ -1,12 +1,14 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import AuthSection from "@/components/ui/section/authSection";
 
+import img1 from "@/assets/images/img-login.png";
+import img2 from "@/assets/images/img-beranda.png";
 
 export default function RegistPage() {
     const navigate = useNavigate();
 
     return (
-        <AuthSection images={["/src/assets/images/img-login.png", "/src/assets/images/img-beranda.png"]}>
+        <AuthSection images={[img1, img2]}>
             <div className="w-full flex items-center justify-center px-8">
                 <div className="w-full max-w-xl">
                     <div className="flex justify-center mb-2">

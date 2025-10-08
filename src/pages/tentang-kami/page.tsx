@@ -7,16 +7,23 @@ import Accordion from "@/components/ui/accordion";
 import TimSection from "@/components/ui/section/timSection";
 import BrandSection from "@/components/ui/section/brandSection";
 
+import wongso from "@/assets/images/img-wongso.png"
+import tentangKami from "@/assets/images/img-tentang-kami.png"
+import logo from "@/assets/images/karya-vokasi-lms.svg"
+import pelajar from "@/assets/images/pelajar.png"
+import visi from "@/assets/images/img-visi.svg"
+import misi from "@/assets/images/img-misi.svg"
+
 export default function TentangKami() {
     return (
         <div>
             <div>
                 <HeroSection
-                    title="src/assets/images/img-wongso.png"
+                    title={wongso}
                     subtitle="Karya Vokasi LMS"
                     description={`Tentang Kami`}
                     highlightColor="text-green-400"
-                    imageSrc="src/assets/images/img-tentang-kami.png"
+                    imageSrc={tentangKami}
                     imageAlt="Ilustrasi LMS"
                     showTopRightCircle={false}
                     showBottomLeftCircle={false}
@@ -24,12 +31,12 @@ export default function TentangKami() {
             </div>
             <div>
                 <HeroSection
-                    title="src/assets/images/karya-vokasi-lms.svg"
+                    title={logo}
                     subtitle="Bersama kita tumbuh menginspirasi perubahan “Inovasi dan Kolaborasi” menuju pembangunan keberlanjutan"
                     description={`Karya Vokasi LMS adalah platform pembelajaran online yang dirancang khusus untuk mendukung pelajar, karyawan, maupun masyarakat yang ingin meningkatkan keterampilan vokasi agar siap bersaing di dunia kerja.\n
                                     Melalui kursus-kursus terstruktur, para peserta tidak hanya mendapatkan materi pembelajaran yang relevan dengan kebutuhan industri, tetapi juga berkesempatan memperoleh sertifikat kompetensi yang dapat dijadikan bekal untuk bekerja dan mengembangkan karier.`}
                     highlightColor="text-green-400"
-                    imageSrc="src/assets/images/pelajar.png"
+                    imageSrc={pelajar}
                     imageAlt="Ilustrasi LMS"
                     backgroundColor="#BAE4C5"
                 />
@@ -45,12 +52,12 @@ export default function TentangKami() {
                 <VMCard
                     title="Visi"
                     description="Pemberdayaan bersama Pendidikan dan Industri untuk masa depan berkelanjutan"
-                    imageSrc="src/assets/images/img-visi.svg"
+                    imageSrc={visi}
                 />
                 <VMCard
                     title="Misi"
                     description="Mengubah masa depan melalui kolaborasi pendidikan dan industri menuju inovasi pembelajaran dimana Pendidikan dan industri bertumbuh bersama"
-                    imageSrc="src/assets/images/img-misi.svg"
+                    imageSrc={misi}
                 />
 
             </div>

@@ -9,13 +9,13 @@ import AboutPage from "@/pages/tentang-kami/page";
 import ContactPage from "@/pages/kontak/page";
 import CatalogPage from "@/pages/katalog/page";
 import LoginPage from "@/pages/auth/login-page";
-import RegistPage from "./pages/auth/regist/regist-page";
-import RegistPengajarPage from "./pages/auth/regist/pengajar/pengajar-page";
-import RegistPelajarPage from "./pages/auth/regist/pelajar/pelajar-page";
-import RegistPaketPelajarPage from "./pages/auth/regist/pelajar/paket";
-import RegistMapelPelajarPage from "./pages/auth/regist/pelajar/mata-pelajaran";
-import PaymentPage from "./pages/auth/regist/metode-pembayaran-page";
-import DetailPaymentPage from "./pages/auth/regist/detail-pembayaran-page";
+import RegistPage from "@/pages/auth/regist/regist-page";
+import RegistPengajarPage from "@/pages/auth/regist/pengajar/pengajar-page";
+import RegistPelajarPage from "@/pages/auth/regist/pelajar/pelajar-page";
+import RegistPaketPelajarPage from "@/pages/auth/regist/pelajar/paket";
+import RegistMapelPelajarPage from "@/pages/auth/regist/pelajar/mata-pelajaran";
+import PaymentPage from "@/pages/auth/regist/metode-pembayaran-page";
+import DetailPaymentPage from "@/pages/auth/regist/detail-pembayaran-page";
 
 const route = (path: string, { ...props }: RouteObject) => ({ path, ...props });
 

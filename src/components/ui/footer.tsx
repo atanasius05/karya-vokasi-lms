@@ -6,6 +6,8 @@ import {
     FaYoutube,
 } from "react-icons/fa";
 
+import wongso from "@/assets/images/wongso.png"
+
 export default function Footer() {
     return (
         <footer className="bg-[#3C3C43] text-gray-300 px-10 py-12">
@@ -13,7 +15,7 @@ export default function Footer() {
                 {/* Logo & Info */}
                 <div>
                     <img
-                        src="/wongso.png" // 👉 ganti sesuai path logomu
+                        src={wongso} // 👉 ganti sesuai path logomu
                         alt="Wongso Logo"
                         className="h-12 mb-4"
                     />

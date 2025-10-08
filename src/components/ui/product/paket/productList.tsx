@@ -7,6 +7,8 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 // Import dummy data
 import { dummyProducts } from "@/utils/data/paket";
 
+import userIcon from "@/assets/images/user-icon.svg"; 
+
 export default function ProductList() {
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
@@ -78,7 +80,7 @@ export default function ProductList() {
                     </span>
                     <span className="flex items-center gap-1 text-[12px] text-gray-500 dark:text-gray-400 ml-3">
                       <img
-                        src="/src/assets/images/user-icon.svg"
+                        src= {userIcon}
                         alt="user-icon"
                         className="h-4"
                       />{" "}

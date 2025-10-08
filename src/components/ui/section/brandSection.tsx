@@ -1,12 +1,21 @@
+import netflix from "@/assets/images/brand-icon/netflix.svg"
+import youtube from "@/assets/images/brand-icon/youtube.svg"
+import google from "@/assets/images/brand-icon/google.svg"
+import lenovo from "@/assets/images/brand-icon/lenovo.svg"
+import slack from "@/assets/images/brand-icon/slack.svg"
+import verizon from "@/assets/images/brand-icon/verizon.svg"
+import lexmark from "@/assets/images/brand-icon/lexmark.svg"
+import microsoft from "@/assets/images/brand-icon/microsoft.svg"
+
 const brands = [
-  { name: "Netflix", logo: "src/assets/images/brand-icon/netflix.svg" },
-  { name: "YouTube", logo: "src/assets/images/brand-icon/youtube.svg" },
-  { name: "Google", logo: "src/assets/images/brand-icon/google.svg" },
-  { name: "Lenovo", logo: "src/assets/images/brand-icon/lenovo.svg" },
-  { name: "Slack", logo: "src/assets/images/brand-icon/slack.svg" },
-  { name: "Verizon", logo: "src/assets/images/brand-icon/verizon.svg" },
-  { name: "Lexmark", logo: "src/assets/images/brand-icon/lexmark.svg" },
-  { name: "Microsoft", logo: "src/assets/images/brand-icon/microsoft.svg" },
+  { name: "Netflix", logo: netflix },
+  { name: "YouTube", logo: youtube },
+  { name: "Google", logo: google },
+  { name: "Lenovo", logo: lenovo },
+  { name: "Slack", logo: slack },
+  { name: "Verizon", logo: verizon },
+  { name: "Lexmark", logo: lexmark },
+  { name: "Microsoft", logo: microsoft },
 ];
 
 export default function BrandSection() {

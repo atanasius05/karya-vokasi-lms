@@ -7,16 +7,19 @@ import { MapSection } from "@/components/ui/section/mapSection";
 import ContactForm from "@/components/ui/form/contactForm";
 import Map from "@/components/ui/map";
 
+import wongso from "@/assets/images/img-wongso.png"
+import imgKontak from "@/assets/images/img-kontak.png"
+
 export default function Kontak() {
     return (
         <div>
             <div>
                 <HeroSection
-                    title="src/assets/images/img-wongso.png"
+                    title={wongso}
                     subtitle="Karya Vokasi LMS"
                     description={`Kontak`}
                     highlightColor="text-green-400"
-                    imageSrc="src/assets/images/img-kontak.png"
+                    imageSrc={imgKontak}
                     imageAlt="Ilustrasi LMS"
                 />
             </div>

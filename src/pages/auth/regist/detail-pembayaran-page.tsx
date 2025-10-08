@@ -2,6 +2,14 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import wongsoLogo from "@/assets/images/img-wongso.png";
 
+import bca from "@/assets/images/vendor/bca.svg";
+import bri from "@/assets/images/vendor/bri.svg";
+import mandiri from "@/assets/images/vendor/mandiri.svg";
+import ovo from "@/assets/images/vendor/ovo.svg";
+import gopay from "@/assets/images/vendor/gopay.svg";
+import visa from "@/assets/images/vendor/visa.svg";
+import masterCard from "@/assets/images/vendor/master-card.svg";
+
 export default function DetailPembayaranPage() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -34,14 +42,16 @@ export default function DetailPembayaranPage() {
       minimumFractionDigits: 0,
     }).format(num);
 
+  
+
   const vendorLogos: Record<string, string> = {
-    "Bank BCA": "/src/assets/images/vendor/bca.svg",
-    "Bank BRI": "/src/assets/images/vendor/bri.svg",
-    "Bank Mandiri": "/src/assets/images/vendor/mandiri.svg",
-    OVO: "/src/assets/images/vendor/ovo.svg",
-    GoPay: "/src/assets/images/vendor/gopay.svg",
-    Visa: "/src/assets/images/vendor/visa.svg",
-    MasterCard: "/src/assets/images/vendor/master-card.svg",
+    "Bank BCA": bca,
+    "Bank BRI": bri,
+    "Bank Mandiri": mandiri,
+    OVO: ovo,
+    GoPay: gopay,
+    Visa: visa,
+    MasterCard: masterCard,
   };
 
   return (

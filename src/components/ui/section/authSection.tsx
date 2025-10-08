@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import type { ReactNode } from "react";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 
+import decor from "@/assets/images/left-section-1.png";
+
 interface AuthSectionProps {
   children: ReactNode;
   images: string[];
@@ -44,7 +46,7 @@ export default function AuthSection({ children, images }: AuthSectionProps) {
 
         {/* Decorative Element di bawah kanan */}
         <img
-          src="/src/assets/images/left-section-1.png"
+          src={decor}
           alt="Decoration"
           className="
             absolute 
@@ -61,7 +63,7 @@ export default function AuthSection({ children, images }: AuthSectionProps) {
         />
         {/* Decorative Element di atas kanan (flip) */}
         <img
-          src="/src/assets/images/left-section-1.png"
+          src={decor}
           alt="Decoration"
           className="
             absolute 
@@ -78,7 +80,7 @@ export default function AuthSection({ children, images }: AuthSectionProps) {
         />
         {/* Decorative Element di bawah kiri (flip) */}
         <img
-          src="/src/assets/images/left-section-1.png"
+          src={decor}
           alt="Decoration"
           className="
             absolute 
@@ -95,7 +97,7 @@ export default function AuthSection({ children, images }: AuthSectionProps) {
         />
         {/* Decorative Element di atas kiri */}
         <img
-          src="/src/assets/images/left-section-1.png"
+          src={decor}
           alt="Decoration"
           className="
             absolute 
