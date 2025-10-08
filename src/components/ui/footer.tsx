@@ -26,24 +26,48 @@ export default function Footer() {
 
                     {/* Social Icons */}
                     <div className="flex space-x-4 mt-6">
-                        <a href="#" className="bg-[#3C3C43] p-2 rounded-md hover:bg-green-400 text-white shadow-lg">
-                            <FaFacebookF size={18} />
-                        </a>
-                        <a href="#" className="bg-[#3C3C43] p-2 rounded-md hover:bg-green-400 text-white shadow-lg">
-                            <FaInstagram size={18} />
-                        </a>
-                        <a
-                            href="#"
-                            className="bg-[#3C3C43] p-2 rounded-md hover:bg-green-400 text-white shadow-lg"
-                        >
-                            <FaLinkedinIn size={18} />
-                        </a>
-                        <a href="#" className="bg-[#3C3C43] p-2 rounded-md hover:bg-green-400 text-white shadow-lg">
-                            <FaTwitter size={18} />
-                        </a>
-                        <a href="#" className="bg-[#3C3C43] p-2 rounded-md hover:bg-green-400 text-white shadow-lg">
-                            <FaYoutube size={18} />
-                        </a>
+                        <div className="flex space-x-4 mt-6">
+                            <a
+                                href="#"
+                                aria-label="Facebook"
+                                className="bg-[#3C3C43] p-2 rounded-md hover:bg-green-400 text-white shadow-lg"
+                            >
+                                <FaFacebookF size={18} aria-hidden="true" />
+                            </a>
+
+                            <a
+                                href="#"
+                                aria-label="Instagram"
+                                className="bg-[#3C3C43] p-2 rounded-md hover:bg-green-400 text-white shadow-lg"
+                            >
+                                <FaInstagram size={18} aria-hidden="true" />
+                            </a>
+
+                            <a
+                                href="#"
+                                aria-label="LinkedIn"
+                                className="bg-[#3C3C43] p-2 rounded-md hover:bg-green-400 text-white shadow-lg"
+                            >
+                                <FaLinkedinIn size={18} aria-hidden="true" />
+                            </a>
+
+                            <a
+                                href="#"
+                                aria-label="Twitter"
+                                className="bg-[#3C3C43] p-2 rounded-md hover:bg-green-400 text-white shadow-lg"
+                            >
+                                <FaTwitter size={18} aria-hidden="true" />
+                            </a>
+
+                            <a
+                                href="#"
+                                aria-label="YouTube"
+                                className="bg-[#3C3C43] p-2 rounded-md hover:bg-green-400 text-white shadow-lg"
+                            >
+                                <FaYoutube size={18} aria-hidden="true" />
+                            </a>
+                        </div>
+
                     </div>
                 </div>
 

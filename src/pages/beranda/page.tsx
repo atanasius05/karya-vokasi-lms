@@ -34,7 +34,7 @@ export default function Home() {
 
             </div>
 
-            <div className="-mt-6 p-6 relative z-50">
+            <div className="-mt-6 p-6 relative z-10">
                 <ThreeCards />
             </div>
 

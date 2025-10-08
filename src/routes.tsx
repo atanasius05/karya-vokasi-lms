@@ -15,6 +15,7 @@ import RegistPelajarPage from "./pages/auth/regist/pelajar/pelajar-page";
 import RegistPaketPelajarPage from "./pages/auth/regist/pelajar/paket";
 import RegistMapelPelajarPage from "./pages/auth/regist/pelajar/mata-pelajaran";
 import PaymentPage from "./pages/auth/regist/metode-pembayaran-page";
+import DetailPaymentPage from "./pages/auth/regist/detail-pembayaran-page";
 
 const route = (path: string, { ...props }: RouteObject) => ({ path, ...props });
 
@@ -71,6 +72,10 @@ const routes: RouteObject[] = [
       {
         path: "/pembayaran",
         element: <PaymentPage />,
+      },
+      {
+        path: "/detail-pembayaran",
+        element: <DetailPaymentPage />,
       },
     ],
   }),

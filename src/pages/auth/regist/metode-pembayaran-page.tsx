@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import { ChevronDownIcon, CheckCircleIcon } from "@heroicons/react/24/solid";
 import AuthSection from "@/components/ui/section/authSection";
 import wongsoLogo from "@/assets/images/img-wongso.png";
 
@@ -11,12 +11,11 @@ export default function MetodePembayaranPage() {
     const product = location.state?.product;
 
     const [openAccordion, setOpenAccordion] = useState<string | null>(null);
+    const [selectedVendor, setSelectedVendor] = useState<string | null>(null);
 
     const toggleAccordion = (section: string) => {
         setOpenAccordion(openAccordion === section ? null : section);
     };
-
-    console.log("Product:", product)
 
     if (!product) {
         return (
@@ -46,11 +45,22 @@ export default function MetodePembayaranPage() {
     const vendorLogos: Record<string, string> = {
         "Bank BCA": "/src/assets/images/vendor/bca.svg",
         "Bank BRI": "/src/assets/images/vendor/bri.svg",
-        "   Bank Mandiri": "/src/assets/images/vendor/mandiri.svg",
+        "Bank Mandiri": "/src/assets/images/vendor/mandiri.svg",
         OVO: "/src/assets/images/vendor/ovo.svg",
         GoPay: "/src/assets/images/vendor/gopay.svg",
         Visa: "/src/assets/images/vendor/visa.svg",
-        MasterCard: "/src/assets/images/vendor/master-card.svg"
+        MasterCard: "/src/assets/images/vendor/master-card.svg",
+    };
+
+    const handleConfirm = () => {
+        if (selectedVendor) {
+            navigate("/detail-pembayaran", {
+                state: {
+                    product,
+                    vendor: selectedVendor,
+                },
+            });
+        }
     };
 
     return (
@@ -68,7 +78,7 @@ export default function MetodePembayaranPage() {
                     </div>
 
                     {/* Judul */}
-                    <h1 className="text-[32px] font-bold text-center mb-8">
+                    <h1 className="text-[32px] font-semibold text-center mb-8">
                         Metode Pembayaran
                     </h1>
 
@@ -103,8 +113,9 @@ export default function MetodePembayaranPage() {
                                 >
                                     <span>{item.label}</span>
                                     <ChevronDownIcon
-                                        className={`w-6 h-6 transition-transform duration-300 ${openAccordion === item.key ? "rotate-180" : ""
-                                            }`}
+                                        className={`w-6 h-6 transition-transform duration-300 ${
+                                            openAccordion === item.key ? "rotate-180" : ""
+                                        }`}
                                     />
                                 </button>
 
@@ -120,21 +131,52 @@ export default function MetodePembayaranPage() {
                                             className="overflow-hidden"
                                         >
                                             <div className="p-6 space-y-3">
-                                                {vendors[item.key as keyof typeof vendors].map((v) => (
-                                                    <button
-                                                        key={v}
-                                                        className="w-full py-4 px-5 rounded-xl bg-white dark:bg-gray-600 text-base font-medium shadow hover:bg-gray-100 dark:hover:bg-gray-500 flex items-center gap-3"
-                                                    >
-                                                        <img src={vendorLogos[v]} alt={v} className="w-10 h-10 object-contain" />
-                                                        <span>{v}</span>
-                                                    </button>
-                                                ))}
+                                                {vendors[item.key as keyof typeof vendors].map(
+                                                    (v) => (
+                                                        <button
+                                                            key={v}
+                                                            onClick={() => setSelectedVendor(v)}
+                                                            className={`w-full py-4 px-5 rounded-xl text-base font-medium shadow flex items-center gap-3 justify-between ${
+                                                                selectedVendor === v
+                                                                    ? "bg-green-100 dark:bg-green-600 border-2 border-green-500"
+                                                                    : "bg-white dark:bg-gray-600 hover:bg-gray-100 dark:hover:bg-gray-500"
+                                                            }`}
+                                                        >
+                                                            <div className="flex items-center gap-3">
+                                                                <img
+                                                                    src={vendorLogos[v]}
+                                                                    alt={v}
+                                                                    className="w-10 h-10 object-contain"
+                                                                />
+                                                                <span>{v}</span>
+                                                            </div>
+                                                            {selectedVendor === v && (
+                                                                <CheckCircleIcon className="w-6 h-6 text-green-500" />
+                                                            )}
+                                                        </button>
+                                                    )
+                                                )}
                                             </div>
                                         </motion.div>
                                     )}
                                 </AnimatePresence>
                             </div>
                         ))}
+                    </div>
+
+                    {/* Button Lanjut */}
+                    <div className="mt-8 w-full flex justify-center">
+                        <button
+                            disabled={!selectedVendor}
+                            onClick={handleConfirm}
+                            className={`px-8 py-4 w-full rounded-xl text-lg font-semibold transition ${
+                                selectedVendor
+                                    ? "bg-green-500 hover:bg-green-600 text-white"
+                                    : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                            }`}
+                        >
+                            Lanjut
+                        </button>
                     </div>
                 </div>
             </div>
